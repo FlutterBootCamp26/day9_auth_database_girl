@@ -43,8 +43,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
             ),
             SizedBox(height: 24),
             ElevatedButton(
-              onPressed: () {
-                Database().signUp(
+              onPressed: () async{
+                await Database().signUp(
                   email: emailController.text,
                   password: passwordController.text,
                 );
